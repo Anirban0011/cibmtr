@@ -11,7 +11,7 @@ class EncodeCat:
     def __call__(self):
         train = self.train
         test = self.test
-        FEATURES, CATS = constants()
+        FEATURES, CATS = constants()()
         for c in FEATURES:
             if train[c].dtype == "object":
                 train[c] = train[c].fillna("NAN")
