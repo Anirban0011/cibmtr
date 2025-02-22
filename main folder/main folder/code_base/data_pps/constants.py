@@ -2,7 +2,7 @@ import pandas as pd
 
 
 class constants:
-    def __init__(self):
+    def __call__(self):
         FEATURES = [
             "dri_score",
             "psych_disturb",
