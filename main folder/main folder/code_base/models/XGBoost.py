@@ -23,7 +23,7 @@ class XGBoost:
             print(f"### Fold {i+1}")
             print("#" * 25)
 
-            FEATURES, _ = constants()
+            FEATURES, _ = constants()()
 
             x_train = train.loc[train_index, FEATURES].copy()
             y_train = train.loc[train_index, "y"]
