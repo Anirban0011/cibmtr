@@ -3,7 +3,7 @@ from xgboost import XGBRegressor, XGBClassifier
 import xgboost as xgb
 import numpy as np
 import pandas as pd
-from ..data_pps.constants import constants
+from code_base.data_pps.constants import constants
 
 
 class XGBoost:
