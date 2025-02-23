@@ -3,7 +3,7 @@ import lightgbm as lgb
 from sklearn.model_selection import KFold
 import numpy as np
 import pandas as pd
-from data_pps.constants import constants
+from code_base.data_pps.constants import constants
 
 
 class CATBoost:
