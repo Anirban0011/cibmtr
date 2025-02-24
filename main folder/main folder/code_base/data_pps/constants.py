@@ -4,6 +4,7 @@ import pandas as pd
 class constants:
     def __init__(self):
         pass
+
     def __call__(self):
         FEATURES = [
             "dri_score",
@@ -102,4 +103,3 @@ class constants:
             "pulm_moderate",
         ]
         return FEATURES, CATS
-

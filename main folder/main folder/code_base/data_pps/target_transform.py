@@ -1,4 +1,4 @@
-from lifelines import KaplanMeierFitter
+from lifelines import KaplanMeierFitter, BreslowFlemingHarringtonFitter
 import pandas as pd
 import numpy as np
 
@@ -44,4 +44,12 @@ class TargetTransform:
         kmf = KaplanMeierFitter()
         kmf.fit(train[time_col], train[event_col])
         y = kmf.survival_function_at_times(train[time_col]).values
+        return y
+
+    def BFHF_transform(
+        self, train: pd.DataFrame, time_col="efs_time", event_col="efs"
+    ):
+        bfhf = BreslowFlemingHarringtonFitter()
+        bfhf.fit(train[time_col], train[event_col])
+        y = bfhf.survival_function_at_times(train[time_col]).values
         return y
